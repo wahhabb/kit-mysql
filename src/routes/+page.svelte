@@ -31,7 +31,7 @@
 {/if}
 
 <style>
-    button {
+    button, p {
         padding: .5em .8em;
         margin: .5em;
         font-size: 110%;

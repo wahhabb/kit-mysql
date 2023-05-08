@@ -4,11 +4,17 @@ let mysqlconn = null;
 
 export function mysqlconnFn() {
   if (!mysqlconn) {
+    // mysqlconn = mysql.createConnection({
+    //   host: "127.0.0.1",
+    //   user: "root",
+    //   password: "",
+    //   database: "statedata",
+    // });
     mysqlconn = mysql.createConnection({
-      host: "127.0.0.1",
-      user: "root",
-      password: "",
-      database: "statedata",
+      host: "162.241.218.208",
+      user: "algyvwmy_state_reader",
+      password: "SveltekitMySQL",
+      database: "algyvwmy_states",
     });
   }
 
