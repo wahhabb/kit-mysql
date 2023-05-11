@@ -4,7 +4,7 @@ export async function load() {
   let mysqlconn = await mysqlconnFn();
   try {
     let results = await mysqlconn
-      .query("SELECT state FROM states limit 50;")
+      .query("SELECT state FROM states;")
       .then(function ([rows, fields]) {
         //        console.log(rows);
         return rows;

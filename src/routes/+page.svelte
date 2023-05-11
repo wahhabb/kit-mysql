@@ -2,7 +2,7 @@
     let res;
 	let statedata = '';
 	async function xget(st) {
-        const response = await fetch("/api/add", {
+        const response = await fetch("/api/getstate", {
             method: 'POST',
             body: JSON.stringify({st}),
             headers: {
