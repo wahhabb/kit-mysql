@@ -36,4 +36,7 @@
         margin: .5em;
         font-size: 110%;
     }
+    :global(body) {
+        background-color: blanchedalmond;
+    }
 </style>
