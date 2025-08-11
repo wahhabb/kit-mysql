@@ -15,7 +15,7 @@ export async function load() {
     };
   } catch (error) {
     console.error("Got an error!!!");
-    console.log(error);
+    console.error(error);
     return error;
   }
 }

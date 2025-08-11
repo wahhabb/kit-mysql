@@ -1,6 +1,6 @@
 <script>
     let res;
-	let statedata = '';
+	let statedata = $state('');
 	async function xget(st) {
         const response = await fetch("/api/getstate", {
             method: 'POST',
@@ -14,15 +14,15 @@
         res =  await response.json();
         statedata = res[0];
 	}
-	export let data;
-	//	console.log('===>', Object.getOwnPropertyNames(data.data[0]));
+    let { data } = $props();
+	
 	//	const states = JSON.parse(data);
 </script>
 
 <h1>Get State Information</h1>
 <p>Click state name to see data at bottom.</p>
 {#each data.data as state}
-<button on:click={() => xget(state.state)}>{state.state}</button>{/each}
+<button onclick={() => xget(state.state)}>{state.state}</button>{/each}
 {#if statedata}
     <p>The capital of {statedata.state} is {statedata.capital}!</p>
     <p>Its abbreviation is {statedata.abbr}.</p>
