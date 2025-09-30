@@ -12,10 +12,10 @@ export function mysqlconnFn() {
     //   database: "statedata",
     // });
     mysqlconn = mysql.createConnection({
-      host: "162.241.218.208",
-      user: "algyvwmy_state_reader",
-      password: "SveltekitMySQL",
-      database: "algyvwmy_states",
+      host: "82.180.138.232",
+      user: "u384526927_wahhab",
+      password: "sT4t3s&!ccmc9",
+      database: "u384526927_States",
     });
   }
 
