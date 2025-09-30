@@ -12,7 +12,7 @@ export function mysqlconnFn() {
     //   database: "statedata",
     // });
     mysqlconn = mysql.createConnection({
-      host: "82.180.138.232",
+      host: "srv766.hstgr.io",
       user: "u384526927_wahhab",
       password: "sT4t3s&!ccmc9",
       database: "u384526927_States",
