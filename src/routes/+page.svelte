@@ -26,7 +26,7 @@
     <p>It is in the {statedata.region} region.</p>
     <p>Its state bird is the {statedata.bird}.</p>
 {/if}
-<p>Click state name to see data at bottom.</p>
+<p>Click state name to see data above.</p>
 {#each data.data as state}
 <button onclick={() => xget(state.state)}>{state.state}</button>{/each}
 
