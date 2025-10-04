@@ -13,7 +13,7 @@ export function mysqlconnFn() {
     // });
     mysqlconn = mysql.createConnection({
       host: "srv766.hstgr.io",
-      user: "u384526927_wahhab",
+      user: "u384526927_wahhabb",
       password: "sT4t3s&!ccmc9",
       database: "u384526927_States",
     });
