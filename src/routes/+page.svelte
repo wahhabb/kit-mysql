@@ -20,15 +20,16 @@
 </script>
 
 <h1>Get State Information</h1>
-<p>Click state name to see data at bottom.</p>
-{#each data.data as state}
-<button onclick={() => xget(state.state)}>{state.state}</button>{/each}
 {#if statedata}
     <p>The capital of {statedata.state} is {statedata.capital}!</p>
     <p>Its abbreviation is {statedata.abbr}.</p>
     <p>It is in the {statedata.region} region.</p>
     <p>Its state bird is the {statedata.bird}.</p>
 {/if}
+<p>Click state name to see data at bottom.</p>
+{#each data.data as state}
+<button onclick={() => xget(state.state)}>{state.state}</button>{/each}
+
 
 <style>
     button, p {
