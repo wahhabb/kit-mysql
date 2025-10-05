@@ -1,5 +1,7 @@
 import { json } from "@sveltejs/kit";
-import { mysqlconnFn } from "$lib/db/mysql";
+// import { mysqlconnFn } from "$lib/db/mysql";
+import mysql from "mysql2/promise";
+
 
 export async function POST({ request }) {
   const { st } = await request.json();

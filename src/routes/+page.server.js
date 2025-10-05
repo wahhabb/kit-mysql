@@ -1,4 +1,4 @@
-i//mport { mysqlconnFn } from "$lib/db/mysql";
+//import { mysqlconnFn } from "$lib/db/mysql";
 
 // export async function load() {
 //   let mysqlconn = await mysqlconnFn();
@@ -18,8 +18,10 @@ i//mport { mysqlconnFn } from "$lib/db/mysql";
 //     console.error(error);
 //     return error;
 //   }
-}
+//}
 
+import mysql from "mysql2/promise";
+//import { createPool} from "mysql2";
 export async function load() {
   try {
     const pool = await mysql.createPool({
