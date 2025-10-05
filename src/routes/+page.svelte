@@ -15,8 +15,6 @@
         statedata = res[0];
 	}
     let { data } = $props();
-	
-	//	const states = JSON.parse(data);
 </script>
 
 <h1>Get State Information</h1>
@@ -26,7 +24,7 @@
     <p>It is in the {statedata.region} region.</p>
     <p>Its state bird is the {statedata.bird}.</p>
 {/if}
-<p>Click state name to see data above.</p>
+<h2>Click state name to see data above.</h2>
 {#each data.data as state}
 <button onclick={() => xget(state.state)}>{state.state}</button>{/each}
 
@@ -37,7 +35,7 @@
         margin: .5em;
         font-size: 110%;
     }
-    :global(body) {
-        background-color: blanchedalmond;
+    button {
+        background-color: #DDF;
     }
-</style>
+ </style>

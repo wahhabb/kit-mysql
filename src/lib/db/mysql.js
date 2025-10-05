@@ -1,24 +1,24 @@
 import mysql from "mysql2/promise";
 
-let mysqlconn = null;
+let myPool = null;
 
-export function mysqlconnFn() {
-  if (!mysqlconn) {
+export async function myPoolFn() {
+  try {
+    myPool = await mysql.createPool({
+          host: "srv766.hstgr.io",
+          user: "u384526927_wahhabb",
+          password: "sT4t3s&!ccmc9",
+          database: "u384526927_States",
     // used for development with MAMP
-    // mysqlconn = mysql.createConnection({
     //   host: "127.0.0.1",
     //   user: "root",
     //   password: "",
-    //   database: "statedata",
-    // });
-    mysqlconn = mysql.createConnection({
-      host: "srv766.hstgr.io",
-      user: "u384526927_wahhabb",
-      password: "sT4t3s&!ccmc9",
-      database: "u384526927_States",
+    //   database: "statedata",          
     });
+  } catch(error) {
+    console.error("Got an error on getting pool!!!");
+    console.error(error);
+    return error;
   }
-
-  return mysqlconn;
+  return myPool;
 }
-

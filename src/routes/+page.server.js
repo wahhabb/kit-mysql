@@ -1,35 +1,9 @@
-//import { mysqlconnFn } from "$lib/db/mysql";
-
-// export async function load() {
-//   let mysqlconn = await mysqlconnFn();
-//   try {
-//     let results = await mysqlconn
-//       .query("SELECT state FROM states;")
-//       .then(function ([rows, fields]) {
-//         //        console.log(rows);
-//         return rows;
-//       });
-
-//     return {
-//       data: results,
-//     };
-//   } catch (error) {
-//     console.error("Got an error!!!");
-//     console.error(error);
-//     return error;
-//   }
-//}
-
 import mysql from "mysql2/promise";
-//import { createPool} from "mysql2";
+import { myPoolFn } from "$lib/db/mysql.js";
+
 export async function load() {
   try {
-    const pool = await mysql.createPool({
-      host: "srv766.hstgr.io",
-      user: "u384526927_wahhabb",
-      password: "sT4t3s&!ccmc9",
-      database: "u384526927_States",
-    });
+    const pool = await myPoolFn();
     let results = await(pool.query('SELECT state FROM states;')
       .then (function ([rows, fields]) {
         //        console.log(rows);
@@ -40,7 +14,7 @@ export async function load() {
       data: results,
     }
   } catch (error) {
-    console.error("Got an error!!!");
+    console.error("Got an error getting state data!!!");
     console.error(error);
     return error;
   }
